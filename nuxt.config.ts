@@ -3,7 +3,6 @@ import svgLoader from 'vite-svg-loader'
 
 const isProduction = !!process.env.IS_PRODUCTION
 const apiDomain = process.env.API_URL_DOMAIN || process.env.LOCAL_API_SERVER || '0.0.0.0:8020'
-console.log(apiDomain)
 
 // const apiSecure = !process.env.API_URL_INSECURE
 const apiSecure = !process.env.LOCAL_API_SERVER
