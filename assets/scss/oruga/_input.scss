@@ -1,0 +1,28 @@
+.o-input {
+  @apply p-6;
+  border: 2px solid var(--8, rgba(255, 255, 255, 0.08));
+
+  &::placeholder {
+    @apply text-dark-blue;
+  }
+  
+  &--danger {
+    @apply border-rose-500 bg-gray bg-gradient;
+  }
+
+  &--primary {
+    @apply bg-gray bg-gradient border-none text-dark-blue;
+  }
+
+  &--transparent {
+    @apply bg-transparent text-dark-blue;
+  }
+
+  &__icon-left {
+    @apply text-[1.25rem] text-dark-blue w-[3.5rem];
+  }
+
+  &-iconspace-left {
+    @apply pl-[3rem];
+  }
+}

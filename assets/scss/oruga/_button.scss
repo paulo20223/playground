@@ -1,0 +1,52 @@
+@use "../utils/" as *;
+
+.o-btn {
+  @apply p-4;
+  @include flex-center;
+  line-height: 1.18;
+  transition: all 150ms ease;
+  font-weight: 600 !important;
+
+  @each $name, $pair in $colors {
+    $bg: nth($pair, 1);
+    $color: nth($pair, 2);
+    $bg-invert: nth($pair, 3);
+    $color-invert: nth($pair, 4);
+
+    &--#{$name} {
+      background: $bg;
+      color: $color;
+      &:hover {
+        background: $bg-invert;
+        color: $color-invert;
+      }
+    }
+  }
+
+  &--outlined {
+    background:  $white;
+    @each $name, $pair in $colors {
+      $bg: nth($pair, 1);
+      $color: nth($pair, 2);
+      $bg-invert: nth($pair, 3);
+      $color-invert: nth($pair, 4);
+      &-#{$name} {
+          background: $color;
+          color: $bg;
+          border: .5px solid $bg;
+          &:hover {
+              border-color: transparent;
+              color: $color;
+              background-color: $bg;
+          }
+      }
+    }
+  }
+  &:hover {
+    transition: all 300ms ease-in-out;
+  }
+  &--border {
+    border: .5px solid $primary;
+  }
+}
+

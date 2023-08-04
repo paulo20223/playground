@@ -1,0 +1,17 @@
+$primary: rgba(255, 255, 255, 0.08);
+$primary-light: #67829A;
+$gray: #67829A;
+$warning: #F97415;
+$white: #fff !default;
+$black: #000000 !default;
+$dark-green: #22492E;
+
+$danger: #eb4242;
+$transparent: transparent;
+
+$colors: (
+  "primary": ($primary, $gray, $primary-light,  $black),
+  "primary-light": ($primary-light, $black, $primary, $white),
+  "danger": ($danger, $black, $danger, $black),
+  "success": ($dark-green, $black, $dark-green, $black)
+);

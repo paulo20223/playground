@@ -1,0 +1,10 @@
+.o-field {
+  @apply mb-8;
+
+  &__label {
+    font-size: 1rem;
+    font-weight: 400;
+    color: white;
+    padding-bottom: 14px;
+  }
+}

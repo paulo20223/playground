@@ -1,0 +1,48 @@
+@import 'variables';
+
+// input
+$input-height: 4rem;
+$input-border-radius: 1rem;
+
+// select
+$select-height: 2.5rem;
+
+// Button
+$button-height: 3.125rem;
+
+// checkbox
+$checkbox-background-color: rgba(0,0,0,0%);
+$checkbox-border-color: $warning;
+$checkbox-active-background-color: $warning;
+$checkbox-size: 19px;
+$checkbox-label-padding: .5rem .25rem;
+
+
+// tooltip
+$tooltip-background-color: $warning;
+
+// dropdown
+$dropdown-menu-background: transparent;
+$dropdown-menu-box-shadow: none;
+$dropdown-item-active-background-color: transparent;
+$dropdown-item-active-color: $warning;
+$dropdown-item-color: $primary;
+$dropdown-item-active-color: $primary;
+$dropdown-menu-width: 10rem;
+
+
+// notification
+$notification-padding: 1rem 1.5rem;
+$notification-border-radius: 1rem;
+.o-notification__content {
+  @apply text-sm
+}
+
+//button
+$button-border-radius: .75rem;
+
+@import '@oruga-ui/oruga-next/src/scss/oruga-full-vars';
+
+@import "button";
+@import "field";
+@import "input";

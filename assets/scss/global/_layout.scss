@@ -1,0 +1,56 @@
+@use "../utils/variables" as *;
+html {
+  @apply overflow-auto h-screen;
+  @apply overflow-x-hidden;
+}
+.h-min-screen {
+  @apply min-h-screen;
+}
+.flex-x-center {
+  @apply flex justify-center;
+}
+.flex-y-center {
+  @apply flex items-center;
+}
+.flex-center {
+  @apply flex justify-center items-center;
+}
+.is-clipped {
+  overflow: hidden;
+}
+.is-clipped-md {
+  @media (max-width: $md) {
+    overflow: hidden;
+  }
+}
+.items-list {
+  @apply grid;
+  @apply gap-x-4 sm:gap-x-6 lg:gap-x-8 xl:gap-x-10;
+  @apply gap-y-8 sm:gap-y-10 lg:gap-y-12 xl:gap-y-14;
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  .artwork-card {
+    @apply h-full;
+  }
+}
+.space-form {
+  @apply space-y-9;
+  &-group {
+    @apply space-y-8;
+  }
+  &-fields {
+    @apply space-y-5;
+  }
+}
+.field-row {
+  @apply flex gap-4 flex-wrap sm:flex-nowrap;
+  flex: 1 1 0;
+  > * {
+    @apply w-full;
+  }
+  .c-field__block {
+    &,
+    .dropdown {
+      @apply w-full;
+    }
+  }
+}

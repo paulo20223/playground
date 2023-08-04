@@ -1,0 +1,102 @@
+{
+  "extends":[
+    "stylelint-config-standard",
+    "stylelint-config-standard-scss",
+    "stylelint-config-recommended-vue"
+  ],
+  "overrides": [
+    {
+      "files": ["**/*.scss"],
+      "customSyntax": "postcss-scss"
+    }
+  ],
+  "rules": {
+    "color-function-notation": "legacy",
+    "declaration-empty-line-before":"never",
+    "rule-empty-line-before":"never",
+    "value-list-max-empty-lines":1,
+    "no-descending-specificity":null,
+    "selector-class-pattern": "^([a-z][a-z0-9]*)(-[a-z0-9]+)*((_|__)([a-z][a-z0-9]*)(-[a-z0-9]+)*)*$",
+    "selector-pseudo-element-no-unknown":[
+      true,
+      {
+        "ignorePseudoElements":[
+          "v-deep"
+        ]
+      }
+    ],
+    "selector-pseudo-class-no-unknown":[
+      true,
+      {
+        "ignorePseudoClasses":[
+          "deep"
+        ]
+      }
+    ],
+    "at-rule-empty-line-before":[
+      "always",
+      {
+        "except":[
+          "inside-block",
+          "blockless-after-blockless",
+          "first-nested"
+        ],
+        "ignore": [
+          "after-comment"
+        ]
+      }
+    ],
+    "at-rule-no-unknown": null,
+    "scss/at-rule-no-unknown":[
+      true,
+      {
+        "ignoreAtRules":[
+          "apply",
+          "include",
+          "mixin",
+          "function",
+          "return",
+          "for",
+          "config",
+          "tailwind",
+          "each",
+          "use",
+          "forward",
+          "extend",
+          "if",
+          "else",
+          "layer",
+          "screen"
+        ]
+      }
+    ],
+    "function-no-unknown":[
+      true,
+      {
+        "ignoreFunctions":[
+          "themify",
+          "overlay-gradient",
+          "skeleton-gradient",
+          "slider-arrow-shadow",
+          "repeat-content",
+          "channel",
+          "color.adjust",
+          "map.merge",
+          "map.get",
+          "math.div",
+          "math.abs",
+          "math.tan",
+          "list.nth"
+        ]
+      }
+    ],
+    "annotation-no-unknown":[
+      true,
+      {
+        "ignoreAnnotations":[
+          "global"
+        ]
+      }
+    ]
+  }
+}

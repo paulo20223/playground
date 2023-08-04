@@ -1,0 +1,25 @@
+@use "../utils" as *;
+html {
+  @apply overflow-auto;
+  scroll-behavior: smooth;
+}
+.container-xs {
+  @apply max-w-[60rem] mx-auto;
+}
+a:disabled {
+  @apply pointer-events-none opacity-50;
+}
+a:not(:disabled) {
+  @apply cursor-pointer;
+}
+textarea:focus, input:focus{
+  outline: none;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #000;
+    transition: background-color 5000s ease-in-out 0s;
+}

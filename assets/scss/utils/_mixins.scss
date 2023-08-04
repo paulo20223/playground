@@ -1,0 +1,80 @@
+@use "./variables" as *;
+
+@mixin set-height($h: auto) {
+  height: $h;
+  min-height: $h;
+}
+
+@mixin set-width($w: auto) {
+  width: $w;
+  min-width: $w;
+}
+
+@mixin set-size($size: auto) {
+  @include set-height($size);
+  @include set-width($size);
+}
+
+@mixin circle($diameter) {
+  @include set-size($diameter);
+  border-radius: calc(#{$diameter} * 0.5);
+}
+
+@mixin visible-before-after($position: absolute) {
+  content: ' ';
+  display: flex;
+  position: $position;
+}
+
+@mixin flex-x-center() {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin flex-y-center() {
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+
+@mixin flex-center() {
+  @include flex-x-center;
+  @include flex-y-center;
+}
+
+@mixin my($value) {
+  margin-top: $value;
+  margin-bottom: $value;
+}
+
+@mixin mx($value) {
+  margin-left: $value;
+  margin-right: $value;
+}
+
+@mixin py($value) {
+  padding-top: $value;
+  padding-bottom: $value;
+}
+
+@mixin px($value) {
+  padding-left: $value;
+  padding-right: $value;
+}
+
+@mixin position-sticky {
+  position: fixed;
+  @supports (position: sticky) {
+    position: sticky;
+  }
+}
+
+
+@function set-color($color) {
+  @if (lightness($color) > 20) {
+    @return #000;
+  }
+  @else {
+    @return #FFF;
+  }
+}
