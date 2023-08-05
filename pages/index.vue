@@ -12,11 +12,11 @@
 </template>
 
 <script setup lang=ts>
-import { serviceStore } from '@/store'
-const { list } = serviceStore()
+import { serviceService } from '@/services'
+const { list } = serviceService()
 
 try {
-  const services = await list()
+  const service = await list()
 } catch {}
 </script>
 

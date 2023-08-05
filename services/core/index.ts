@@ -1,7 +1,5 @@
 import type { FetchRequest } from 'ofetch'
 import type { IFilterQuery, IListResponse } from './index.types'
-// import { authStore } from '~/store'
-// import type { ITokenModelData } from '~/models'
 export * from './index.types'
 
 export interface Newable<T> { new(...args: any[]): T }

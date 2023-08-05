@@ -31,13 +31,13 @@
 <script setup>
 import { Form } from 'vee-validate'
 import * as yup from 'yup'
-import { serviceStore } from '@/store'
+import { serviceService } from '@/services'
 const schema = yup.object().shape({
   name: yup.string().required(),
   triggers: yup.string().required(),
 })
 
-const { suggest } = serviceStore()
+const { suggest } = serviceService()
 
 async function onSubmit(values, actions) {
   try {
